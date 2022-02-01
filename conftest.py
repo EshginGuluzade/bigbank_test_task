@@ -7,9 +7,9 @@ driver=None
 @pytest.fixture(scope="class")
 def setup(request):
     global driver
-    #options = Options()
-    #options.add_argument("--headless")
-    driver = webdriver.Chrome(ChromeDriverManager().install())#, chrome_options=options)
+    options = Options()
+    options.add_argument("--headless")
+    driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=options)
     driver.implicitly_wait(12)
     driver.get("https://ansokan.bigbank.se/?amount=85000&period=120&interestRate=10.95&lang=sv&bbsource=google&bbchannel=organic")
     driver.maximize_window()
