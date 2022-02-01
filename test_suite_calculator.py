@@ -1,5 +1,5 @@
 import os
-os.system('pip3 install -r requirements.txt --user')
+os.system('pip install -r requirements.txt')
 import time
 from selenium.webdriver.common.by import By
 from utilities.BaseClass import BaseClass
